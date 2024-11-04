@@ -1,8 +1,15 @@
-# Your Name Here
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov  3 20:39:05 2024
+
+@author: goali
+"""
+
+# Steele Jacobson
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# Submission Date: 11/3/24
+# Lab 07
+# Lab Section: 12
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -16,8 +23,26 @@
     # To do so you can use the methods `.isdigit()` or `.isnumeric()`
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
+f = 1
+g = 0
+h = input("Enter an upper bound ")
 
-factorial = 1
+while f > 0:
+    if h.isdigit():
+        f = 0
+    else:
+        print("Enter a positive numerical value")
+        h = input("Enter an upper bound ")
+        f = 1
+
+g = int(h) 
+l = g - 1
+k = g
+
+while l >= 1:  
+    k = k*(l)
+    l = l-1
+factorial = k
 
 print(f"The result of the factorial based on the given bound is {factorial}")
 
@@ -36,8 +61,24 @@ print("*"*75)
     # I recommend checking out: https://www.w3schools.com/python/ref_string_replace.asp to figure out how one may remove a character from a string
 # All this together means you will have an intensive while loop that includes multiple if statements, likely with some nesting 
 # The sum should start at 0 
+b = 0
 
-num_sum = 0 
+a = " "
+while a != str("exit"):
+    a = input("Enter a number ")
+    ab = a.replace("-","")
+    while a != str("exit"):
+        
+        d = str(ab)
+        if d.isdigit():
+            c = int(a)
+        else:
+            print("Unrecognized Input")
+            break
+        b = c+b
+        a = input("Enter a number ")
+
+num_sum = b 
 
 print(f"Your final sum is {num_sum}")
 
@@ -59,4 +100,73 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
+b = 0
+aa = input("Enter a string to compute ")
+
+
+
+
+
+fin = 0
+opand1 = " "
+opand2 = " "
+operator = " "
+aa1 = " "
+
+while aa != str("exit"):
+    while aa != str("exit"):
+    
+
+        aaa = aa.replace(" ", "")
+        for item in aaa:
+            if item.isdigit():
+                pass
+            else: 
+                operator = item 
+                a1a = aaa.split(f"{operator}")
+                break
         
+    
+        aa1 = list(a1a)
+        num1 = aa1[0]
+        num2 = aa1[1]
+
+        if num1.isdigit():
+            pass
+        elif num2.isdigit():
+            pass
+        else:
+            print("Unrecognized Input")
+            aa = input("Enter a numerical string to compute ")
+            break
+    
+        opand1 = int(aa1[0])
+        opand2 = int(aa1[1])
+    
+
+        if operator == "+":
+            fin = opand1 + opand2
+
+        elif operator == "-":
+            fin = opand1 - opand2
+
+        elif operator == "*":
+            fin = opand1*opand2
+    
+        elif operator == "/":
+            fin = opand1/opand2
+    
+        elif operator == "%":
+            fin = opand1%opand2
+    
+        else:
+            print("Unrecognized Input")
+            aa = input("Enter a numerical string to compute ")
+        print(f"Your final sum is {fin}")
+    
+        aa = input("Enter a string to compute ")
+
+        
+
+
+
